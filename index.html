@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programas Matemáticos</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            background: #DFBBCA;
+            color: black;
+        }
+        .programa { 
+            background: #774972; 
+            color: white; 
+            padding: 15px; 
+            margin: 10px 0; 
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .programa:hover { background: #5A384A; }
+        .definicion { 
+            background: #F5E6E8; 
+            padding: 15px; 
+            margin: 10px 0;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Programas Matemáticos</h1>
+    
+    <div class="programa" onclick="mostrarDefinicion('divisibilidad')">
+        Divisibilidad
+    </div>
+    <div id="divisibilidad" class="definicion">
+        <h3>Divisibilidad</h3>
+        <p>La divisibilidad estudia las condiciones bajo las cuales un número puede ser dividido exactamente por otro...</p>
+        <p><strong>Para ejecutar:</strong> Descargar los archivos .py y ejecutar con Python</p>
+    </div>
+
+    <div class="programa" onclick="mostrarDefinicion('primos')">
+        Números Primos
+    </div>
+    <div id="primos" class="definicion">
+        <h3>Números Primos</h3>
+        <p>Los números primos son aquellos números naturales mayores que 1 que solo son divisibles por sí mismos y por 1...</p>
+    </div>
+
+    <!-- Agregar los otros 3 programas igual -->
+
+    <h2>Descargar Código</h2>
+    <p><a href="app.py" download>app.py</a> - Programa principal</p>
+    <p><a href="divisibilidad.py" download>divisibilidad.py</a></p>
+    <p><a href="primos.py" download>primos.py</a></p>
+    <!-- Agregar enlaces para los otros archivos -->
+
+    <script>
+        function mostrarDefinicion(id) {
+            // Ocultar todas las definiciones
+            document.querySelectorAll('.definicion').forEach(function(el) {
+                el.style.display = 'none';
+            });
+            // Mostrar la seleccionada
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
